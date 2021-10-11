@@ -1,11 +1,58 @@
 table{
     background-color: white;
-
-
+   
 }
 H1{
-    color: blue;
+    color: rgb(140, 140, 235);
 }
 .id{
-    color: brown;
+    text-align: center;
+    color: rgb(140, 140, 235);
 }
+
+a:hover {
+    color:orange;
+
+}
+
+tr:nth-child(odd) {background:rgb(202, 201, 201)}
+/* Au survol de la souris, changer la couleur de fond de chaque ligne du tableau */
+tr:hover {
+    background-color:indianred;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+
+
+#titre_page{
+    color: rgb(4, 80, 73);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* make image bigger mouseover */
+.grande-image:hover{
+    transform:scale(2,2);
+}
+
+ 
+  
+
+
+
+
+
+
+
