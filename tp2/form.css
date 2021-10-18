@@ -1,0 +1,20 @@
+
+#formulaire{
+    background-color: rgb(238, 204, 204);
+}
+
+#error{
+
+   background-color: pink;
+    padding: 5px;
+    border: 1px solid black;
+    display: none;
+}
+#resultat{
+    background-color: green;
+    padding: 5px;
+    border: 1px solid black;
+    color: white;
+    display: none;
+
+}
