@@ -2,14 +2,21 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP3</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TP3</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  
+<!-- CSS boostrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
+    <script src="js/bootstrap.bundle.js"></script>
 
     <style>
         body {
@@ -26,11 +33,8 @@
     <!--<script src="main.js"></script>-->
 
 
-    <!-- CSS boostrap -->
-    <link rel="stylesheet" href=" bootstrap-5.1.3-dist/css/bootstrap.css">
+  
 
-    <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
-    <script src="bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
     <script src="validation.js"></script>
     <link rel="stylesheet" href="style.css" />
 
@@ -38,63 +42,58 @@
 </head>
 
 <body>
-    <h1>TP3 AW</h1>
-    <p>Formulaire avec bootstrap5 </p>
 
 <!-- Add your site or application content here -->
 <!-- <p>Hello world! This is HTML5 Boilerplate.</p>
 <img src="../galilee.png" alt="Logo Galilee" />-->
-<div class="container">
-    <!-- Content here -->
 
 
-    <form type="input" id="formulaire" >
 
-        <div class="row mb-3">
-            <label for="nom" class="col-sm-2 col-form-label">Nom</label>
-            
+<div class="card text-white bg-secondary mb-3">
+  
+    <div class="card-body">
+      <h1 class="card-title">TP3 AW</h1>
+      <p class="card-text">Formulaire avec Bootstrap</p>
+      <hr>
+      <div class="container">
+        <form type="input" id="formulaire" ></form>
+          <div class="row">
+            <div class="col-6">
+              <label for="nom" class="col-sm-2 col-form-label">Nom</label>
               <input type="text" class="form-control" id="nom">
-           
-          </div> 
-
-        <div class="row mb-3 ">
-          <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
-          
-            <input type="text" class="form-control" id="prenom">
-         
-        </div>
-
-        <div class="row mb-3 ">
-            <label for="prenom" class="col-sm-2 col-form-label">Date de naissance</label>
-            
+            </div>
+            <div class="col-6">
+              <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
+              <input type="text" class="form-control" id="prenom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="prenom" class="col-form-label">Date de naissance</label>
               <input type="date" class="form-control" id="date" placeholder="JJ/MM/AAAA">
-           
+            </div>
           </div>
-
-          <div class="row mb-3">
-            <label for="adresse" class="col-sm-2 col-form-label">Adresse</label>
-            
+          <div class="row">
+            <div class="col">
+              <label for="adresse" class="col-sm-2 col-form-label">Adresse</label>
               <input type="text" class="form-control" id="adresse">
-           
+            </div>
           </div>
-
-          <div class="row mb-3 ">
-            <label for="Mail" class="col-sm-2 col-form-label">Mail</label>
-            
-              <input type="email" class="form-control" id="mail">
-           
+          <div class="row">
+            <div class="col">
+              <label for="Mail" class="col-sm-2 col-form-label">Mail</label>
+              <input type="email" class="form-control" id="mail" placeholder="name@example.com">
+            </div>
           </div>
+          <hr>
+          <div class="form-group ">
           <button type="button" class="btn btn-primary" onclick="window.onload">Valider</button>
-
-        
+          </div>  
         </form>
-        <div id="error" class="error" >  </div>
-
-
-        <div id="resultat" class="resultat"> </div>
-
-</div>
-
+      </div>
+      
+    </div>
+  </div>
 
 
 </body>
