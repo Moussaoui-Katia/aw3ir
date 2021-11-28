@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 
 <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
-    <script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
 
     <style>
         body {
@@ -35,8 +35,9 @@
 
   
 
-    <script src="validation.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <script src="js/form-validation.js"></script>
+
+   
 
 
 </head>
@@ -49,14 +50,14 @@
 
 
 
-<div class="card text-white bg-secondary mb-3">
-  
+  <div class="card text-white bg-secondary" >
+    
     <div class="card-body">
-      <h1 class="card-title">TP3 AW</h1>
-      <p class="card-text">Formulaire avec Bootstrap</p>
+      <h1 class="card-title">TP3 AW </h1>
+      <p class="card-text">Veuillez saisir vos coordonnées </p>
       <hr>
       <div class="container">
-        <form type="input" id="formulaire" ></form>
+        <form type="input" id="formulaire" >
           <div class="row">
             <div class="col-6">
               <label for="nom" class="col-sm-2 col-form-label">Nom</label>
@@ -69,7 +70,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <label for="prenom" class="col-form-label">Date de naissance</label>
+              <label for="date" class="col-form-label">Date de naissance</label>
               <input type="date" class="form-control" id="date" placeholder="JJ/MM/AAAA">
             </div>
           </div>
@@ -87,7 +88,7 @@
           </div>
           <hr>
           <div class="form-group ">
-          <button type="button" class="btn btn-primary" onclick="window.onload">Valider</button>
+          <button type="submit" id="valider" class="btn btn-primary" onclick="window.onload">Valider</button>
           </div>  
         </form>
       </div>
@@ -95,6 +96,87 @@
     </div>
   </div>
 
+
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Erreur dans le formulaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">Tous les champs sont obligatoires</div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" action="window.onload()">OK</button>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalDate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Erreur dans le formulaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">La date de naissance est non valide, elle ne doit pas être dans le futur </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" action="window.onload()">OK</button>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalLangueur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header ">
+          <h5 class="modal-title" id="exampleModalLabel">Erreur dans le formulaire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">Tous les champs doivent avoir 5 caractéres minimum</div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" action="window.onload()">OK</button>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="Modalok" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"> <h5>Bienvenue &nbsp;</h5> 
+          <h5 class="modalok-title" id="exampleModalLabel"> </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          
+
+          
+        
+        <div class="modal-body">
+          <div>
+            <h>Vous êtes nés le  </h> 
+            <h class="modalok-age" ></h>
+            <h > et vous habitez à </h> <br>
+          </div>
+          
+            <a href=" https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=
+            2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"><img src="map.png" alt="" width="300px"></a>
+          <div>
+            
+            <a href="http://maps.google.com/maps?q="> <h class="modalok-adr" ></h></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" action="window.onload()">OK</button>
+            
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
